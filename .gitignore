@@ -10,6 +10,7 @@
 /storage/*.key
 /storage/pail
 /vendor
+.DS_Store
 .env
 .env.backup
 .env.production
@@ -25,14 +26,3 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
-
-# AI Tools
-CLAUDE.md
-AGENTS.md
-.claude/
-.cursor/
-.idea/
-.junie/
-.vscode/
-.mcp.json
-boost.json

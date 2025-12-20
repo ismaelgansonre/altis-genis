@@ -1,35 +1,29 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "shipfastlabs/modern-react-starter-kit",
+    "name": "laravel/react-starter-kit",
     "type": "project",
-    "description": "Laravel starter kit with opinionated modern tooling setup.",
+    "description": "The skeleton application for the Laravel framework.",
     "keywords": [
         "laravel",
         "framework"
     ],
     "license": "MIT",
     "require": {
-        "php": "^8.4",
+        "php": "^8.2",
         "inertiajs/inertia-laravel": "^2.0",
+        "laravel/fortify": "^1.30",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
-        "laravel/wayfinder": "^0.1.11",
-        "nunomaduro/essentials": "^1.0"
+        "laravel/wayfinder": "^0.1.9"
     },
     "require-dev": {
-        "barryvdh/laravel-ide-helper": "^3.6",
-        "driftingly/rector-laravel": "^2.1",
         "fakerphp/faker": "^1.23",
-        "larastan/larastan": "^3.8",
-        "laravel/boost": "^1.8",
         "laravel/pail": "^1.2.2",
         "laravel/pint": "^1.24",
         "laravel/sail": "^1.41",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
-        "pestphp/pest": "^4.2",
-        "pestphp/pest-plugin-laravel": "^4.0",
-        "rector/rector": "^2.2"
+        "phpunit/phpunit": "^11.5.3"
     },
     "autoload": {
         "psr-4": {
@@ -70,8 +64,7 @@
             "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
-            "@php artisan boost:update --ansi"
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
