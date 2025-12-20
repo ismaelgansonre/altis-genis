@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace App\Http\Middleware;
 
-use Inertia\Middleware;
+use Illuminate\Foundation\Inspiring;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Config;
+use Inertia\Middleware;
+use Override;
 
 final class HandleInertiaRequests extends Middleware
 {
@@ -24,6 +25,7 @@ final class HandleInertiaRequests extends Middleware
      *
      * @see https://inertiajs.com/asset-versioning
      */
+    #[Override]
     public function version(Request $request): ?string
     {
         return parent::version($request);
@@ -36,16 +38,18 @@ final class HandleInertiaRequests extends Middleware
      *
      * @return array<string, mixed>
      */
+    #[Override]
     public function share(Request $request): array
     {
-        /** @var array<string, mixed> */
-        return array_merge(parent::share($request), [
-            'name' => Config::get('app.name', 'Larasonic'),
-            'flash' => [
-                'message' => fn () => $request->session()->get('message'),
-                'success' => fn () => $request->session()->get('success'),
-                'error' => fn () => $request->session()->get('error'),
+        [$message, $author] = str(Inspiring::quotes()->random())->explode('-');
+
+        return [
+            ...parent::share($request),
+            'name' => config('app.name'),
+            'quote' => ['message' => mb_trim((string) $message), 'author' => mb_trim((string) $author)],
+            'auth' => [
+                'user' => $request->user(),
             ],
-        ]);
+        ];
     }
 }

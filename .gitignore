@@ -1,8 +1,12 @@
 /.phpunit.cache
+/bootstrap/ssr
 /node_modules
 /public/build
 /public/hot
 /public/storage
+/resources/js/actions
+/resources/js/routes
+/resources/js/wayfinder
 /storage/*.key
 /storage/pail
 /vendor
@@ -18,18 +22,17 @@ yarn-error.log
 /auth.json
 /.fleet
 /.idea
+/.nova
 /.vscode
 /.zed
 
-**/caddy
-frankenphp
-frankenphp-worker.php
-**/composer
-
-.DS_Store
-
-_ide_helper.php
-_ide_helper_models.php
-.phpstorm.meta.php
-
-.scribe/
+# AI Tools
+CLAUDE.md
+AGENTS.md
+.claude/
+.cursor/
+.idea/
+.junie/
+.vscode/
+.mcp.json
+boost.json

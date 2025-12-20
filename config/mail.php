@@ -38,6 +38,7 @@ return [
     */
 
     'mailers' => [
+
         'smtp' => [
             'transport' => 'smtp',
             'scheme' => env('MAIL_SCHEME'),
@@ -86,6 +87,7 @@ return [
                 'smtp',
                 'log',
             ],
+            'retry_after' => 60,
         ],
 
         'roundrobin' => [
@@ -94,6 +96,7 @@ return [
                 'ses',
                 'postmark',
             ],
+            'retry_after' => 60,
         ],
 
     ],

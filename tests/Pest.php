@@ -1,8 +1,6 @@
 <?php
 
 declare(strict_types=1);
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +13,19 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 |
 */
 
-pest()->extend(TestCase::class)
-    ->use(RefreshDatabase::class)
-    ->in('Feature');
+use Illuminate\Support\Sleep;
+
+pest()->extend(Tests\TestCase::class)
+    ->use(Illuminate\Foundation\Testing\RefreshDatabase::class)
+    ->beforeEach(function () {
+        Str::createRandomStringsNormally();
+        Str::createUuidsNormally();
+        Http::preventStrayRequests();
+        Sleep::fake();
+
+        $this->freezeTime();
+    })
+    ->in('Browser', 'Feature', 'Unit');
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +38,9 @@ pest()->extend(TestCase::class)
 |
 */
 
-expect()->extend('toBeOne', fn () => $this->toBe(1));
+expect()->extend('toBeOne', function () {
+    return $this->toBe(1);
+});
 
 /*
 |--------------------------------------------------------------------------
@@ -43,7 +53,7 @@ expect()->extend('toBeOne', fn () => $this->toBe(1));
 |
 */
 
-function something(): void
+function something()
 {
     // ..
 }
