@@ -1,0 +1,35 @@
+{
+    "recommendations": [
+        // Extensions PHP
+        "bmewburn.vscode-intelephense-client",
+        "xdebug.php-debug",
+        
+        // Extensions Laravel
+        "amiralizadeh9480.laravel-extra-intellisense",
+        "onecentlin.laravel-blade",
+        "shufo.vscode-blade-formatter",
+        
+        // Extensions JavaScript/TypeScript
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        
+        // Extensions React
+        "dsznajder.es7-react-js-snippets",
+        
+        // Extensions Tailwind CSS
+        "bradlc.vscode-tailwindcss",
+        
+        // Extensions utiles
+        "editorconfig.editorconfig",
+        "mikestead.dotenv",
+        "usernamehw.errorlens",
+        "eamodio.gitlens",
+        "christian-kohler.path-intellisense",
+        "wayou.vscode-todo-highlight",
+        
+        // Extensions de productivité
+        "formulahendry.auto-rename-tag",
+        "naumovs.color-highlight",
+        "gruntfuggly.todo-tree"
+    ]
+}

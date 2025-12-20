@@ -1,0 +1,112 @@
+{
+    // Paramètres recommandés pour le projet Laravel + React
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    // Configuration pour les fichiers PHP
+    "[php]": {
+        "editor.formatOnSave": true
+    },
+    // Configuration pour les fichiers JavaScript/TypeScript
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+    "[javascriptreact]": {
+        "editor.formatOnSave": true
+    },
+    "[typescript]": {
+        "editor.formatOnSave": true
+    },
+    "[typescriptreact]": {
+        "editor.formatOnSave": true
+    },
+    // Configuration pour les fichiers JSON
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    // Configuration pour les fichiers CSS
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    // Configuration pour les fichiers Blade
+    "[blade]": {
+        "editor.formatOnSave": true
+    },
+    // Paramètres ESLint
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    // Paramètres Prettier
+    "prettier.requireConfig": true,
+    // Paramètres Intelephense (PHP)
+    "intelephense.files.exclude": [
+        "**/vendor/**",
+        "**/node_modules/**",
+        "**/.git/**",
+        "**/.vscode/**"
+    ],
+    // Paramètres TypeScript
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    // Paramètres des fichiers
+    "files.associations": {
+        "*.blade.php": "blade",
+        ".env*": "dotenv"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/node_modules": true,
+        "**/vendor": true,
+        "**/.phpunit.cache": true,
+        "**/public/build": true,
+        "**/public/hot": true,
+        "**/bootstrap/ssr": true
+    },
+    // Paramètres de recherche
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/vendor": true,
+        "**/public/build": true,
+        "**/.git": true,
+        "**/storage": true,
+        "**/.phpunit.cache": true
+    },
+    // Paramètres d'affichage
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js",
+        "*.tsx": "${capture}.js",
+        "*.php": "${capture}.blade.php",
+        "package.json": "package-lock.json, tsconfig.json, vite.config.ts, eslint.config.js, .prettierrc, .prettierignore",
+        "composer.json": "composer.lock, phpunit.xml",
+        ".env": ".env.example, .env.backup, .env.production"
+    },
+    // Paramètres du terminal
+    "terminal.integrated.defaultProfile.linux": "bash",
+    // Paramètres Tailwind CSS
+    "tailwindCSS.experimental.classRegex": [
+        [
+            "cva\\(([^)]*)\\)",
+            "[\"'`]([^\"'`]*).*?[\"'`]"
+        ],
+        [
+            "cn\\(([^)]*)\\)",
+            "(?:'|\"|`)([^']*)(?:'|\"|`)"
+        ]
+    ],
+    "tailwindCSS.includeLanguages": {
+        "typescript": "javascript",
+        "typescriptreact": "javascript"
+    },
+    // Suggestions
+    "editor.quickSuggestions": {
+        "strings": true
+    }
+}

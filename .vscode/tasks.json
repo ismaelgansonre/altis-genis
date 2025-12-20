@@ -1,0 +1,157 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "🔧 Installation complète",
+            "type": "shell",
+            "command": "composer run setup",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "📦 Installer dépendances PHP",
+            "type": "shell",
+            "command": "composer install",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "📦 Installer dépendances Node.js",
+            "type": "shell",
+            "command": "npm install",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "🗄️ Exécuter les migrations",
+            "type": "shell",
+            "command": "php artisan migrate",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "🔄 Rafraîchir la base de données",
+            "type": "shell",
+            "command": "php artisan migrate:fresh --seed",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "🏗️ Compiler assets (production)",
+            "type": "shell",
+            "command": "npm run build",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "🧹 Nettoyer tous les caches",
+            "type": "shell",
+            "command": "php artisan cache:clear && php artisan config:clear && php artisan route:clear && php artisan view:clear",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "⚡ Optimiser pour production",
+            "type": "shell",
+            "command": "php artisan config:cache && php artisan route:cache && php artisan view:cache && composer dump-autoload --optimize",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "🧪 Exécuter les tests",
+            "type": "shell",
+            "command": "php artisan test",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "✨ Formater le code (Prettier)",
+            "type": "shell",
+            "command": "npm run format",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "🔍 Linter le code (ESLint)",
+            "type": "shell",
+            "command": "npm run lint",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "📝 Vérifier les types TypeScript",
+            "type": "shell",
+            "command": "npm run types",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "🔑 Générer clé d'application",
+            "type": "shell",
+            "command": "php artisan key:generate",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "📋 Lister les routes",
+            "type": "shell",
+            "command": "php artisan route:list",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        }
+    ]
+}
