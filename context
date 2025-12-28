@@ -1,0 +1,45 @@
+Thought for 36s## Plan for AltiGenis Website Refinement
+
+Based on the provided screenshots, I'll refine the geological engineering consulting website with the following approach:
+
+**Structure & Pages:**
+
+1. Home page with hero, sectors overview, values, and team sections
+2. About page (À Propos) with company vision and values
+3. Sector pages: Mine, Hydraulic Infrastructures, Construction Management, Urban Development, Environment
+4. Contact page with form and company details
+5. Careers page (Carrière)
+
+
+**Key Features:**
+
+- Bilingual support (French/English) with toggle button
+- AltiGenis branding with logo from provided URL
+- Color scheme: Green accent (`#7CB342` style), Navy blue (`#003B5C`), White, Light gray backgrounds
+- Fully responsive mobile design
+- Animated UI components using shadcn/ui
+- Sector-specific imagery and layouts
+- Professional, clean design reflecting geological engineering expertise
+
+
+**Technical Approach:**
+
+- Use Next.js App Router with TypeScript
+- Implement i18n for bilingual content
+- shadcn/ui components throughout
+- Framer Motion for animations
+- Mobile-first responsive design
+- Reusable components for consistency
+
+
+**Pages to Build:**
+
+1. Layout with navigation and language toggle
+2. Home page with animated hero and sector cards
+3. About page
+4. Individual sector pages (5 sectors)
+5. Contact page with form
+6. Careers page
+
+
+Does this plan align with your vision? Should I proceed with implementation?
