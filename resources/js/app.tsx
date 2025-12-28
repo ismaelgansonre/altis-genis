@@ -1,10 +1,11 @@
-import '../css/app.css';
+import '../css/globals.css';
 
 import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { initializeTheme } from './hooks/use-appearance';
+import { LanguageProvider } from './hooks/use-language';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
@@ -20,7 +21,9 @@ createInertiaApp({
 
         root.render(
             <StrictMode>
-                <App {...props} />
+                <LanguageProvider>
+                    <App {...props} />
+                </LanguageProvider>
             </StrictMode>,
         );
     },
